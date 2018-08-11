@@ -37,6 +37,7 @@ public class Server {
             bufferedReader.close();
             isr.close();
             is.close();
+//            socket关闭的时候，相关联的输入输出流也会自动关闭
             socket.close();
             serverSocket.close();
 

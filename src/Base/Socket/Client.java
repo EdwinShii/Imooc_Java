@@ -14,8 +14,12 @@ public class Client {
             Socket socket = new Socket("localHost",8888);
 //            获取输出流发送登陆信息
             OutputStream os = socket.getOutputStream();
+
+//            ObjectOutputStream objectOutputStream = new ObjectOutputStream(os);
+//            User user = new User("edwin","123")
+//            objectOutputStream.writeObject(user);
             PrintWriter pw = new PrintWriter(os);
-            pw.write("userName:edwin;key:123");
+            pw.write("userName:edwin2;key:123");
             pw.flush();
 
             socket.shutdownOutput();
